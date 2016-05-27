@@ -1,5 +1,6 @@
 require 'sinatra'
-response.headers['X-Cdache-Control'] = 'public, max-age=300'
+
 get '/' do
+  response.headers['Cache-Control'] = 'public, max-age=300'
   "Hello, world"
 end
