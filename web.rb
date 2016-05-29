@@ -1,6 +1,7 @@
 require 'sinatra'
 
 get '/' do
-  headers "Server" => ""
+  Thin.send :remove_const, :SERVER
+  Thin::SERVER = nil
   "Hello, world"
 end
