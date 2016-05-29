@@ -1,6 +1,6 @@
 require 'sinatra'
 
 get '/' do
-  response.headers['Cache-Control'] = 'public, max-age=300'
+  response.headers['Server'] = ''
   "Hello, world"
 end
